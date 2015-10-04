@@ -122,7 +122,7 @@ describe('toRoman (converts numbers to Roman Numerals)', function(){
   it('should convert 900 to CM', function(){
     assert.equal('CM', convert.toRoman((900)));
   });
-  it('should convert (999) to CM', function(){
+  it('should convert (999) to CMXCIX', function(){
     assert.equal('CMXCIX', convert.toRoman((999)));
   });
 })
