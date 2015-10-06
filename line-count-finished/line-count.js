@@ -14,9 +14,10 @@ fs.readFile('sample1.js', 'utf8', function (err,data) {
     nextLine = fileAsArray[i];
     stringStart = nextLine.trim().substring(0, 2);
     console.log(stringStart);
+    console.log(lineCount);
     if (isSingleLineComment(stringStart)) {
     } else if (isMultiLineComment(stringStart)){
-      lineCount =+ findCommentEnd(i, fileAsArray);
+      i + findCommentEnd(i, fileAsArray);
     } else {
       lineCount++;
     }

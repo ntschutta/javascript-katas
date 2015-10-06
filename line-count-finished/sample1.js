@@ -1,6 +1,7 @@
-
 //here is a comment
 function doFoo() {
+  var foo; //counts as a line
+  var bar;
   return 42;
 }
 
