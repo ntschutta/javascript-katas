@@ -7,17 +7,17 @@ fs.readFile('sample1.js', 'utf8', function (err,data) {
   }
   var fileAsArray = data.split(/\r\n|\r|\n/);
   var arrayLength = fileAsArray.length;
+
   var nextLine = '';
   var stringStart = '';
 
   for (var i = 0; i < arrayLength; i++) {
     nextLine = fileAsArray[i];
     stringStart = nextLine.trim().substring(0, 2);
-    console.log(stringStart);
-    console.log(lineCount);
-    if (isSingleLineComment(stringStart)) {
+    if (stringStart.length === 0) {
+    } else if (isSingleLineComment(stringStart)) {
     } else if (isMultiLineComment(stringStart)){
-      i + findCommentEnd(i, fileAsArray);
+      i += findCommentEnd(i, fileAsArray);
     } else {
       lineCount++;
     }
@@ -43,7 +43,7 @@ function isMultiLineComment (line) {
 
 function findCommentEnd (currentIndex, fileArray) {
   var notFound = true;
-  var skipCount = 1;
+  var skipCount = 0;
   while (notFound) {
     var currentLine = fileArray[currentIndex];
     currentLine.trim();

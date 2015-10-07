@@ -7,13 +7,13 @@ function doFoo() {
 
 /*another comment*/
 function doBar() {
-  return 13;
+  return 13; /*another comment*/
 }
 
 /* multi line comment time *
  *                         *
  *                         */
  function doFooBar() {
-   //
+   //this doesnt do much
    return 'hello world';
  }
