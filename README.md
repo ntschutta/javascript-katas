@@ -1,5 +1,5 @@
 # javascript-katas
-Code to accompany my JavaScript Katas talk
+Code to accompany my JavaScript Katas talk.
 
 ##Conference Blurb##
 If you have ever studied a martial art, chances are you are familiar with katas: the practice of individual training exercises. Repeatedly. It may seem pointless to practice the same move again and again, but the only way to improve is repetition. We can apply the same concept to learning programming languages.
